@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation: PDG</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/Image/favicon_io (1)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Image/favicon_io (1)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Image/favicon_io (1)/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <Link rel="stylesheet" href="Calculation.css">
+</head>
+    <body>
+        <h1>
+            🔬 Plane Difraction Grating 🔬   
+        </h1>
+        <nav class="nav">
+            <a href="Homepage.html">Home</a>       
+            <a href="Theory.Html">Theory</a>       
+            <a  href="Procedure.html">Procedure</a>                
+            <a href="Calculation.Html">Calculation</a>               
+        </nav>
+        <br>
+        <table class="row" style="height: 500px;">
+            <thead>
+                <tr style="background-color: rgb(0, 242, 255);">
+                <th rowspan="3">Colours</th>
+                <th colspan="4">Spectrometer Reading</th>
+                <th rowspan="3">X~X'</th>
+                <th rowspan="3">Y~Y'</th>
+                <th rowspan="3">Mean<br>2𝝝</th>
+                <th rowspan="3">𝝝</th>
+                <th rowspan="3">Wavelenght<br>ƛ<br>(nm)</th>
+                </tr>
+                <tr style="background-color: rgb(0,187,255);">
+                    <th colspan="2">LHS</th>
+                    <th colspan="2">RHS</th>
+                </tr>
+                <tr style="background-color: rgb(0, 242, 255);">
+                 <th>X</th>
+                 <th>Y</th>
+                 <th>X'</th>
+                 <th>Y'</th>
+                </tr>
+                <tr style="background-color: rgb(0,187,255);">
+                    <td>Red</td>
+                        <td><input type="number" id='rx' onclick="red()"></td>
+                        <td><input type="number" id='ry' onclick="red()"></td>
+                        <td><input type="number" id='rxd' onclick="red()"></td>
+                        <td><input type="number" id='ryd' onclick="red()"></td>
+                        <td id ='rmodx'></td>
+                        <td id='rmodxe'></td>
+                        <td id='rmean'></td>
+                        <td id='rtheta'></td>
+                        <td id='rwave'></td>
+                </tr>
+                <tr style="background-color: rgb(0, 242, 255);">
+                    <td>Green</td>
+                    <td><input type="number" id='gx' onclick="green()" style="background-color:rgb(0, 242, 255) ;"></td>
+                        <td><input type="number" id='gy' onclick="green()" style="background-color:rgb(0, 242, 255) ;"></td>
+                        <td><input type="number" id='gxd' onclick="green()" style="background-color:rgb(0, 242, 255) ;"></td>
+                        <td><input type="number" id='gyd' onclick="green()" style="background-color:rgb(0, 242, 255) ;"></td>
+                        <td id ='gmodx'></td>
+                        <td id='gmodxe'></td>
+                        <td id='gmean'></td>
+                        <td id='gtheta'></td>
+                        <td id='gwave'></td>
+                </tr>
+                <tr style="background-color: rgb(0,187,255);">
+                    <td>Bluish voilet</td>
+                    <td><input type="number" id='Blvx' onclick="Blv()"></td>
+                    <td><input type="number" id='Blvy' onclick="Blv()"></td>
+                    <td><input type="number" id='Blvxd' onclick="Blv()"></td>
+                    <td><input type="number" id='Blvyd' onclick="Blv()"></td>
+                    <td id ='Blvmodx'></td>
+                    <td id='Blvmodxe'></td>
+                    <td id='Blvmean'></td>
+                    <td id='Blvtheta'></td>
+                    <td id='Blvwave'></td>
+                </tr>
+                <tr style="background-color: rgb(0, 242, 255);">
+                    <td>Blue</td>
+                    <td><input type="number" id='Bx' onclick="Blue()" style="background-color:rgb(0, 242, 255) ;"></td>
+                        <td><input type="number" id='By' onclick="Blue()" style="background-color:rgb(0, 242, 255) ;"></td>
+                        <td><input type="number" id='Bxd' onclick="Blue()" style="background-color:rgb(0, 242, 255) ;"></td>
+                        <td><input type="number" id='Byd' onclick="Blue()" style="background-color:rgb(0, 242, 255) ;"></td>
+                        <td id ='Bmodx'></td>
+                        <td id='Bmodxe'></td>
+                        <td id='Bmean'></td>
+                        <td id='Btheta'></td>
+                        <td id='Bwave'></td>
+                </tr>
+                <tr style="background-color: rgb(0,187,255);">
+                    <td>Voilet</td>
+                    <td><input type="number" id='vx' onclick="Voilet()"></td>
+                    <td><input type="number" id='vy' onclick="Voilet()"></td>
+                    <td><input type="number" id='vxd' onclick="Voilet()"></td>
+                    <td><input type="number" id='vyd' onclick="Voilet()"></td>
+                    <td id ='vmodx'></td>
+                    <td id='vmodxe'></td>
+                    <td id='vmean'></td>
+                    <td id='vtheta'></td>
+                    <td id='vwave'></td>
+                </tr>
+            </thead>
+        </table>
+        <pre>
+                                                                                <button id="resultButton" onclick="calc()">Result</button>
+        </pre>
+        <section class="pic">
+            <a href="https://www.youtube.com/@mohdirfanmohdismail506" target="_blank">YOUTUBE</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="https://drive.google.com/drive/u/0/my-drive" target="_blank">G-DRIVE</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">G-MAIL</a>
+            </section>
+        <footer>
+            <hr>
+        <a href="#">FAQ</a>     <a href="#">Contact us:</a>     <a href="#">Term of use:</a>       <a href="#">&copy;</a>
+        <hr>
+        </footer>
+        <script src="Calculation.js"></script>
+</body>
+</html>
