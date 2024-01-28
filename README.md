@@ -1,5 +1,7 @@
 Concept Related to Diffraction Grating of PHYSIC-2 (SEM-2)
 
+<p>In calculation page we can do the actual calculation for the values getting from the Experiments</p>
+
 Home Page:
 ![image](https://github.com/Suban2108/Physics-2-MINI-Project/blob/main/Image/Homepage.png)
 
